@@ -60,8 +60,13 @@ void matrix_scan_user(void) {
   achordion_task();
 }
 
-
-
+// void keyboard_post_init_user(void) {
+//   // Customise these values to desired behaviour
+//   debug_enable=true;
+//   debug_matrix=true;
+//   //debug_keyboard=true;
+//   //debug_mouse=true;
+// }
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_CANARY] = LAYOUT_split_3x6_3(
@@ -73,7 +78,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼                              ┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
           KC_LGUI   ,KC_Q      ,KC_J      ,KC_V      ,KC_D      ,KC_K      ,                               KC_X      ,KC_H      ,KC_SLSH   ,KC_COMM   ,KC_DOT ,  KC_BSLS,
     // ╰──────────┴──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤        ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────┴──────────╯
-                                                    KC_MEH,     MO(_EXT), KC_SPC,   KC_ENT, MO(_SYM),  MO(_NUM)
+                                                    KC_MEH,     MO(_EXT), KC_SPC,             KC_ENT,  MO(_SYM),  MO(_NUM)
                                                 // ╰──────────┴──────────┴──────────╯        ╰──────────┴──────────┴──────────╯
     ),
 
@@ -84,7 +89,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                              ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
         KC_TRNS   ,KC_ESC    ,ALT_LEFT  ,LCTL(KC_F),ALT_RIGHT ,KC_INS    ,                               KC_PGUP   ,KC_HOME      ,KC_UP     ,KC_END , KC_CAPS   ,KC_TRNS   ,
     // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤                              ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-        LALT(KC_TAB),OSM_LGUI  ,OSM_LALT  ,OSM_LSFT  ,OSM_LCTL  ,OSM_RALT  ,                               KC_PGDN   ,KC_LEFT   ,KC_DOWN   ,KC_RGHT   ,KC_DEL    ,KC_TRNS   ,
+        LCTL(KC_A),    OSM_LGUI  ,OSM_LALT  ,OSM_LSFT  ,OSM_LCTL  ,OSM_RALT  ,                               KC_PGDN   ,KC_LEFT   ,KC_DOWN   ,KC_RGHT   ,KC_DEL    ,KC_TRNS   ,
     // ├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────╮        ╭──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
         KC_TRNS   ,LCTL(KC_Z),LCTL(KC_X),LCTL(KC_C),KC_TAB    ,LCTL(KC_V),                               KC_ENT    ,KC_BSPC   ,KC_NO     ,KC_APP    ,KC_PSCR   ,KC_TRNS   ,
     // ╰──────────┴──────────┴──────────┴──────────┼──────────┼──────────┼──────────┤        ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────┴──────────╯

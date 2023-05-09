@@ -5,5 +5,6 @@ LTO_ENABLE      = yes
 
 RGBLIGHT_SUPPORTED = no
 RGB_MATRIX_SUPPORTED = no
+#CONSOLE_ENABLE = yes
 
 SRC += features/achordion.c
